@@ -15,6 +15,14 @@ class Store
     @color
   end
 
+  def price
+    @price
+  end
+
+  def inventory
+    @inventory
+  end
+
   def inventory=(input_inventory)
     @inventory = input_inventory
   end
@@ -29,3 +37,6 @@ bananas = Store.new("yellow", 2, 120)
 bread = Store.new("brown", 5, 60)
 
 p apples.item_info
+p bananas.item_info
+bananas.inventory = 40
+p bananas.item_info
