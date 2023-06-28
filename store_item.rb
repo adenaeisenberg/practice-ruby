@@ -19,6 +19,10 @@ class Store
     @price
   end
 
+  def half_off_sale
+    @price = @price * 0.50
+  end
+
   def inventory
     @inventory
   end
@@ -40,3 +44,6 @@ apples.item_info
 bananas.item_info
 p bananas.inventory = 40
 bananas.item_info
+bread.item_info
+p bread.half_off_sale
+bread.item_info
