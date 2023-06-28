@@ -36,7 +36,7 @@ apples = Store.new("red", 1, 250)
 bananas = Store.new("yellow", 2, 120)
 bread = Store.new("brown", 5, 60)
 
-p apples.item_info
-p bananas.item_info
-bananas.inventory = 40
-p bananas.item_info
+apples.item_info
+bananas.item_info
+p bananas.inventory = 40
+bananas.item_info
