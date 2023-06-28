@@ -4,9 +4,6 @@ class Transportation
     @direction = "north"
   end
 
-  attr_reader :speed, :direction
-  attr_writer :speed, :direction
-
   def brake
     @speed = 0
   end
@@ -32,8 +29,8 @@ class Bike < Transportation
   end
 end
 
-my_car = Car.new({})
+my_car = Car.new
 my_bike = Bike.new
 
-my_car.accelerate
-my_bike.accelerate
+p my_car.accelerate
+p my_bike.accelerate
