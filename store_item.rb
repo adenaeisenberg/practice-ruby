@@ -11,24 +11,11 @@ class Store
     @inventory = input_inventory
   end
 
-  def color
-    @color
-  end
-
-  def price
-    @price
-  end
+  attr_reader :color, :price, :inventory
+  attr_writer :color, :price, :inventory
 
   def half_off_sale
     @price = @price * 0.50
-  end
-
-  def inventory
-    @inventory
-  end
-
-  def inventory=(input_inventory)
-    @inventory = input_inventory
   end
 
   def item_info
@@ -47,3 +34,6 @@ bananas.item_info
 bread.item_info
 p bread.half_off_sale
 bread.item_info
+
+bread.color = "pink"
+puts bread.color
