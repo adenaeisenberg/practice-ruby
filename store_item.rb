@@ -26,6 +26,7 @@ end
 apples = Store.new("red", 1, 250)
 bananas = Store.new("yellow", 2, 120)
 bread = Store.new("brown", 5, 60)
+oranges = Store.new("orange", 0.75, 45)
 
 apples.item_info
 bananas.item_info
