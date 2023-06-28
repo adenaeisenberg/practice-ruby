@@ -5,10 +5,10 @@
 # puts "Our store sells #{apples[:color]} fruit for #{apples[:price]} dollars amd we have #{apples[:inventory]} in stock"
 
 class Store
-  def initialize(input_color, input_price, input_inventory)
-    @color = input_color
-    @price = input_price
-    @inventory = input_inventory
+  def initialize(item_options)
+    @color = item_options[:input_color]
+    @price = item_options[:input_price]
+    @inventory = item_options[:input_inventory]
   end
 
   attr_reader :color, :price, :inventory
@@ -23,10 +23,10 @@ class Store
   end
 end
 
-apples = Store.new("red", 1, 250)
-bananas = Store.new("yellow", 2, 120)
-bread = Store.new("brown", 5, 60)
-oranges = Store.new("orange", 0.75, 45)
+apples = Store.new(input_color: "red", input_inventory: 250, input_price: 1)
+bananas = Store.new(input_color: "yellow", input_price: 2, input_inventory: 120)
+bread = Store.new(input_price: 5, input_inventory: 60, input_color: "brown")
+oranges = Store.new(input_color: "orange", input_price: 0.75, input_inventory: 45)
 
 apples.item_info
 bananas.item_info
