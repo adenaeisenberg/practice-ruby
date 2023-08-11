@@ -76,9 +76,23 @@
 # - end
 
 def greater_than_ten(array)
+  index = 0
+  small_numbers_array = []
+  while index < array.length
+    if array[index] < 10
+      small_numbers_array << array[index]
+    end
+    index = index + 1
+  end
+  if small_numbers_array.length == 0
+    p true
+  else
+    p false
+  end
 end
 
-p greater_than_ten([2, 6, 34, 98])
+# greater_than_ten([2, 6, 34, 98])
+greater_than_ten([11, 20, 30, 40])
 # try this one too p greater_than_ten([11, 20, 30, 40])
 
 #   10) Write a function that takes in an array of words and returns the number of times the letter “a” appeared in total.
